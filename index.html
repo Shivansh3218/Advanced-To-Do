@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header tag that contains buttons -->
+    <header>
+        <nav>
+            <button class="all">All</button>
+            <button class="red">Red</button>
+            <button class="blue">blue</button>
+            <button class="black">black</button>
+            <button class="yellow">yellow</button>
+            <button class="complete">Completed</button>
+        </nav>
+        <span>
+            <button class="create-task">Create Task
+            </button>
+        </span>
+    </header>
+    
+
+    <!-- First div that contains the edit task -->
+   
+        <div id="hello-div" class="edit inactive">
+            <form id="form" >
+            <textarea name="text" id="hello" cols="30" rows="10"></textarea>
+            <button class="submit-me">done</button>
+        </form>
+            <div class="to-add-buttons">
+                <button class="red-inside">Red</button>
+                <button class="blue-inside">blue</button>
+                <button class="black-inside">black</button>
+                <button class="yellow-inside">yellow</button>
+                
+            </div>
+        </div>
+   
+ <div id="disp" class="disp">
+
+
+ </div>
+         
+       
+    
+
+</body>
+<script src="script.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+let editButton = document.createElement("button")
+editButton.classList = "edit-button"
+editButton.innerText ="Edit"
+redd.append(editButton)
+
+let deleting = document.createElement("button")
+deleting.classList = "delete"
+deleting.innerText ="Delete"
+redd.append(deleting)
+
+
+editButton.addEventListener("click",()=>{
+    if(editButton.innerText == "save"){
+        editButton.innerText ="edit"
+        red1.setAttribute("readonly","readonly")
+    }
+    else if(editButton.innerText ="edit"){
+        editButton.innerText = "save"
+        red1.removeAttribute("readonly")
+    
+    }
+})
+
+
+
+    deleting.addEventListener("click",()=>{
+        display.removeChild(redd)  
+    })
+
+    
+   -->
