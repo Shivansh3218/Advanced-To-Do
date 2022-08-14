@@ -14,8 +14,6 @@ let display = document.getElementById("disp")
 let completeds = document.getElementById("completed")
 
 
-
-
 //FIRST TO SHOW THE TASK FILLING BOX
 
 del.addEventListener("click", fun)
@@ -24,8 +22,8 @@ function fun() {
     edit.classList.remove("inactive")
     display.classList.add("disp")
     document.body.style.background = " rgb(188, 184, 178)"
-    document.body.style.zIndex= "-10"
-    document.body.style.opacity= "0.9"
+    document.body.style.opacity = "0.7"
+
 
     red.addEventListener("click", function () {
         edit.classList.add("red-added")
@@ -40,12 +38,12 @@ function fun() {
     yellow.addEventListener("click", function () {
         edit.classList.add("yellow-added")
     })
-
 }
 done.addEventListener("click", (e) => {
     e.preventDefault()
 
-
+    document.body.style.background = "none"
+    document.body.style.opacity = "1"
 
     // RED CONTAINER-----------------------------------------------------------------------------
 
@@ -94,6 +92,7 @@ done.addEventListener("click", (e) => {
 
         check.addEventListener("click", () => {
             completeds.appendChild(redd)
+
         })
 
         //EDIT DELETE BUTTONS
@@ -136,20 +135,20 @@ done.addEventListener("click", (e) => {
         cul.style.height = "20px"
         cul.addEventListener("click", () => {
             let arr = ["red", "blue", "yellow", "black"]
-            let mouse = Math.floor(Math.random() * arr.length)
+            let mouse = Math.floor(Math.random() * arr.length) 
             let mouser = arr[mouse]
-            cul.style.backgroundColor = mouser
+            cul.style.backgroundColor = mouser 
             redd.style.borderTopColor = mouser
 
             if (mouser == "blue"){
-                redd.classList.remove("red-added")
-                redd.classList.add("blue-added")
+                redd.classList.remove("reddish")
+                redd.classList.add("blueish")
             }else if(mouser=="black"){
-                redd.classList.remove("red-added")
-                redd.classList.add("black-added")
+                redd.classList.remove("reddish")
+                redd.classList.add("blackish")
             }else if(mouser == "yellow"){
-                redd.classList.remove("red-added")
-                redd.classList.add("yellow-added")
+                redd.classList.remove("reddish")
+                redd.classList.add("yellowish")
             }
         })
         // ----LOCK UNLOCK CONTROLS
@@ -168,11 +167,12 @@ done.addEventListener("click", (e) => {
                 division.classList.add("bio")
             }
         })
-        display.appendChild(redd)
+        display.appendChild(redd) 
+        // redBox.append(redd)
     }
 
 
-    //BLUE CONTAINER----------------------------------------------------------------------------
+    //BLUE CONTAINER-------------------------------------------------------------------------------------------
 
 
    else if (edit.classList.contains("blue-added")) {
@@ -227,7 +227,6 @@ done.addEventListener("click", (e) => {
         editButton.classList = "edit-button"
         editButton.innerText = "Edit"
         division.append(editButton)
-
         let deleting = document.createElement("button")
         deleting.classList = "delete"
         deleting.innerText = "Delete"
@@ -243,7 +242,6 @@ done.addEventListener("click", (e) => {
             else if (editButton.innerText = "edit") {
                 editButton.innerText = "save"
                 blue1.removeAttribute("readonly")
-
             }
         })
         deleting.addEventListener("click", () => {
@@ -269,14 +267,14 @@ done.addEventListener("click", (e) => {
             bluee.style.borderTopColor = mouser
 
             if (mouser == "red"){
-                bluee.classList.remove("bluee-added")
-                bluee.classList.add("red-added")
+                bluee.classList.remove("blueish")
+                bluee.classList.add("reddish")
             }else if(mouser=="black"){
-                bluee.classList.remove("bluee-added")
-                bluee.classList.add("black-added")
+                bluee.classList.remove("blueish")
+                bluee.classList.add("blackish")
             }else if(mouser == "yellow"){
-                bluee.classList.remove("bluee-added")
-                bluee.classList.add("yellow-added")
+                bluee.classList.remove("blueish")
+                bluee.classList.add("yellowish")
             }
         })
         // ----LOCK UNLOCK CONTROLS
@@ -293,8 +291,6 @@ done.addEventListener("click", (e) => {
             else if (lock.innerText = "unlocked") {
                 lock.innerText = "lock"
                 division.classList.add("bio")
-
-
             }
         })
        
@@ -374,8 +370,7 @@ done.addEventListener("click", (e) => {
             }
             else if (editButton.innerText = "edit") {
                 editButton.innerText = "save"
-                black1.removeAttribute("readonly")
-
+               black1.removeAttribute("readonly")
             }
         })
         deleting.addEventListener("click", () => {
@@ -418,7 +413,6 @@ done.addEventListener("click", (e) => {
                 division.classList.add("bio")
             }
         })
-
         // display.append(blackk)
        display.appendChild(blackk)
     }
@@ -559,31 +553,30 @@ let allBox = document.getElementById("alling")
 //TO TAKE HTML COLLECTION AND CONVERT INTO ARRAY TO APPLY FILTER METHOD
 let displayItems = Array.from(display.getElementsByTagName("div"))
 
-function definer(){
-    if(div.classList == "reddish"){
-     redBox.appendChild(div)
-    }
-}
-function definer1(){
-    if(div.classList == "blueish"){
-     blueBox.appendChild(div)
-    }
-}
-function definer2(){
-    if(div.classList == "blackish"){
-     blackBox.appendChild(div)
-    }
-}
-function definer3(){
-    if(div.classList == "yellowish"){
-     yellowBox.appendChild(div)
-    }
-}
-let filterItem = displayItems.filter(definer)
-let filterItem2 = displayItems.filter(definer1)
-let filterItem3 = displayItems.filter(definer2)
-let filterItem4 = displayItems.filter(definer3)
-
+// function definer(){
+//     if(x.includes("reddish")){
+//      redBox.appendChild(div)
+//     }
+// }
+// function definer1(){
+//     if(x.includes("blueish")){
+//      blueBox.appendChild(div)
+//     }
+// }
+// function definer2(){
+//     if(x.includes("blackish")){
+//      blackBox.appendChild(div)
+//     }
+// }
+// function definer3(){
+//     if(x.includes("yellowish")){
+//      yellowBox.appendChild(div)
+//     }
+// }
+// let filterItem = displayItems.filter(definer)
+// let filterItem2 = displayItems.filter(definer1)
+// let filterItem3 = displayItems.filter(definer2)
+// let filterItem4 = displayItems.filter(definer3)
 
 //BUTTONS ON HEADER FUNCTIONALITY OF SHOWING AND HIDING WHEN CLICKED
 let redButton = document.getElementsByClassName("red")[0]
@@ -591,7 +584,6 @@ redButton.addEventListener("click",()=>{
 redBox.classList.add("show")
 redBox.classList.remove("hide")
 })
-
 
 let blueButton = document.getElementsByClassName("blue")[0]
 blueButton.addEventListener("click",()=>{
@@ -602,13 +594,11 @@ blackBox.classList.remove("show")
 yellowBox.classList.remove("show")
 })
 
-
 let blackButton = document.getElementsByClassName("black")[0]
 blackButton.addEventListener("click",()=>{
 blackBox.classList.add("show")
 blackBox.classList.remove("hide")
 })
-
 
 let yellowButton = document.getElementsByClassName("yellow")[0]
 yellowButton.addEventListener("click",()=>{
