@@ -5,7 +5,29 @@ header{
     flex-direction: row;
     justify-content: space-around;
 }
+.all{
+    padding: 10px;
+    background-color:bisque;
+}
+button{
+    border-radius: 10px;
+}
 
+button:hover{
+    background-color: aqua;
+}
+
+.create-task{
+    border-radius: 10px;
+    padding: 10px;
+}
+nav{
+    margin: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+/* BUTTONS THAT ARE PRESENT INSIDE EDIT CONTAINER */
 .red, .red-inside{
     background-color: red;
     padding: 5px;
@@ -30,31 +52,40 @@ header{
     border-radius: 10px;
     color: rgb(0, 0, 0);
 }
+
+
+
+/* CLASS ADDED TO CHANGE THE BOX */
 .reddish{
     width: 300px;
     overflow: hidden;
-    height: 200px;
+    height: 220px;
     border: 1px solid black;
+    background-color: azure;
     border-top: 10px solid red;
+
 }
 .blackish{
     width: 300px;
     overflow: hidden;
-    height: 200px;
+    height: 220px;
     border: 1px solid black;
+    background-color: azure;
     border-top: 10px solid rgb(0, 0, 0);
 }
 .blueish{
     width: 300px;
     overflow: hidden;
-    height: 200px;
+    height: 220px;
+    background-color: azure;
     border: 1px solid black;
     border-top: 10px solid rgb(34, 9, 255);
 }
 .yellowish{
     width: 300px;
     overflow: hidden;
-    height: 200px;
+    background-color: azure;
+    height: 220px;
     border: 1px solid black;
     border-top: 10px solid rgb(252, 255, 61);
 }
@@ -63,17 +94,22 @@ header{
 
 #hello{
     border: none;
-    /* height: 300px; */
     background-color: antiquewhite;
 }
 .active{
     background-color: antiquewhite;
     display: flex;
+    margin-left: 400px;
+    padding: 10px;
+    position: absolute;
+    background: rgb(131, 124, 124);
+    top: 150px;
     flex-direction: row;
     height: 200px;
     width: 300px;
     justify-content: space-between;
     z-index: 20;
+    opacity: 20;
 }
 .to-add-buttons{
     display: flex;
@@ -85,33 +121,57 @@ header{
     display: none;
 }
 
-.disp{
-    background-color: aqua;
-    width: 200vh;
+#disp{
+    /* background-color: aqua; */
     height: 800px;
-    /* position: fixed;
+    width: 200vh;
     display: flex;
     flex-direction: row;
-    width: auto;
-    height: auto;
-    background: rgba(73, 166, 233, 0.5);
-    display: grid;
-    place-items: center;
-    visibility: hidden; 
-    z-index: -10; */
+    flex-wrap: wrap;
+    gap: 30px;
+    z-index: 10;
 }
 
-.display{
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    left: 0;
-    /* width: 100%; */
-    /* height: 100%; */
-    background: rgba(73, 166, 233, 0.5);
-    display: grid;
-    place-items: center;
+.disp{
+    /* z-index: 10; */
     visibility: visible;
+    width: 100%;
+    height: 100%;
+    /* background:rgb(132, 132, 216); */
+}
+.isc{
+    display: flex;
+    gap:10px;
+    margin:10px;
+}
+.bio{
+    display: none;
+}
+
+
+/* DIVS THAT CONTAIN THE ITEMS ACCORDING TO DATA */
+.completed, .redding , .blueing, .blacking, .alling, .yellowing{
+    background-color: rgb(162, 162, 153);
+    visibility: hidden;
+    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top :100px;
+    gap:20px;
+    width: auto;
+    z-index: 20;
+    height: auto;
+}
+.show{
+    display: block;
+    visibility: visible;
+    display: flex;
+    gap: 20px;
+    margin: 20px;
     z-index: 10;
+}
+.hide{
+    display: none;
+    visibility: hidden;
 }

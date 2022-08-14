@@ -14,7 +14,7 @@
     <!-- Header tag that contains buttons -->
     <header>
         <nav>
-            <button class="all">All</button>
+            <button class="all">All tasks</button>
             <button class="red">Red</button>
             <button class="blue">blue</button>
             <button class="black">black</button>
@@ -29,7 +29,7 @@
     
 
     <!-- First div that contains the edit task -->
-   
+
         <div id="hello-div" class="edit inactive">
             <form id="form" >
             <textarea name="text" id="hello" cols="30" rows="10"></textarea>
@@ -39,64 +39,24 @@
                 <button class="red-inside">Red</button>
                 <button class="blue-inside">blue</button>
                 <button class="black-inside">black</button>
-                <button class="yellow-inside">yellow</button>
-                
+                <button class="yellow-inside">yellow</button>      
             </div>
+       
         </div>
-   
- <div id="disp" class="disp">
-
-
+        <div id="disp" class="disp">
+            
  </div>
          
-       
+ <div id="completed" class="completed"></div>
+ <div id="alling" class="alling"></div>
+ <div id = "redding" class="redding"></div>
+ <div id="blueing" class="blueing"></div>
+ <div id="blacking" class="blacking"></div>
+ <div id="yellowing" class="yellowing"></div>
     
+
 
 </body>
 <script src="script.js"></script>
 </html>
 
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-
-let editButton = document.createElement("button")
-editButton.classList = "edit-button"
-editButton.innerText ="Edit"
-redd.append(editButton)
-
-let deleting = document.createElement("button")
-deleting.classList = "delete"
-deleting.innerText ="Delete"
-redd.append(deleting)
-
-
-editButton.addEventListener("click",()=>{
-    if(editButton.innerText == "save"){
-        editButton.innerText ="edit"
-        red1.setAttribute("readonly","readonly")
-    }
-    else if(editButton.innerText ="edit"){
-        editButton.innerText = "save"
-        red1.removeAttribute("readonly")
-    
-    }
-})
-
-
-
-    deleting.addEventListener("click",()=>{
-        display.removeChild(redd)  
-    })
-
-    
-   -->
